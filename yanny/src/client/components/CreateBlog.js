@@ -1,7 +1,7 @@
 function CreateBlog () {
     return ( 
         <div>
-            <section>
+            <section className="add-blog-page">
                 <h4>Write new article</h4>
                 <form className="new-blog-form" action="">
                     <label htmlFor="name">Name

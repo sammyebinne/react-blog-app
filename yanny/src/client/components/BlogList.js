@@ -2,7 +2,7 @@ import Blog from "./Blog";
 
 function BlogList({ blogs }) {
     return (
-        <section className="blogs-conainer">
+        <section className="blogs-container">
             <div>
                 {blogs.map((blog) => {
                     return <Blog key={blog.id} blog={blog} />
