@@ -6,24 +6,38 @@ import Navbar from "./Navbar";
 import './styles/App.css';
 
 function Home() {
-    const { data, loading, error } = useFetch('http://localhost:4000/blogs');
+    const url = 'http://localhost:4000/blogs';
+    const { data, loading, error } = useFetch(url);
     const [addingPost, setAddingPost] = useState(false);
+    const [filteredBlogs, setFilteredBlogs] = useState(data);
 
-    const handleAddPost = ()=> { 
+    const handleAddPost = () => {
         setAddingPost(true);
     }
+
+    const handleCancelAddPost = () => {
+        setAddingPost(false);
+    }
+
+    const filterData = (args) => {
+        // const input = args.trim().toLowerCase();
+        // const test = (info) => info.author.toLowerCase().includes(input) || info.email.toLowerCase().includes(input) || info.text.toLowerCase().includes(input)
+        // const filtered = data.filter(test);
+
+        // setFilteredBlogs(filtered);
+    }
+    
 
 
     return (
         <div className="app-container">
-            <Navbar addPost={handleAddPost} />
+            <Navbar addPost={handleAddPost} cancelAddPost={handleCancelAddPost} grabFilterArgs={filterData}/>
             <main className="container">
                 {error && <div>{error}</div>}
                 {loading && <div>Fetching Blogs...</div>}
                 {addingPost && <CreateBlog />}
-                {data && !addingPost && <div>
-                    <BlogList blogs={data} />
-                </div>}
+                {data && !addingPost &&
+                    <BlogList blogs={filteredBlogs} />}
             </main>
             {/* the below divs are purely for decorative purposes */}
             <div className="bubble-one"></div>

@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import Comment from "./Comment";
 import CreateReply from './CreateReply';
 
 
 function Blog({ blog }) {
-    const { title, author, email, text, comments } = blog;
+    const { id, title, author, email, text, comments } = blog;
     const [expand, setExpand] = useState(false);
     const [enterComment, setEnterComment] = useState(false);
 
@@ -19,6 +20,14 @@ function Blog({ blog }) {
 
     const handleComment = () => {
         !enterComment ? setEnterComment(true) : setEnterComment(false);
+    }
+
+    const deleteBlog = () => {
+        fetch('http://localhost:4000/blogs/' + id, {
+            method: 'DELETE'
+        }).then((res) => {
+            console.log(res);
+        })
     }
 
     return (
@@ -53,7 +62,7 @@ function Blog({ blog }) {
                             })}
                     </div>
                 </div> 
-                : <button className="delete-btn" onClick={() => console.log('deleted')}>Delete Post</button>}
+                : <button className="delete-btn" onClick={deleteBlog}>Delete Post</button>}
                 
             </div>
         </article>

@@ -1,6 +1,7 @@
 import Blog from "./Blog";
 
 function BlogList({ blogs }) {
+     
     return (
         <section className="blogs-container">
             <div>

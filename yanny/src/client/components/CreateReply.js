@@ -1,5 +1,5 @@
 import { useState } from "react";
-import useFetch from "../../assets/customHooks/useFetch";
+// import useFetch from "../../assets/customHooks/useFetch";
 
 function CreateReply({blogData}) {
     const [name, setName] = useState('');

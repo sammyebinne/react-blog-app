@@ -1,0 +1,62 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "The Weird One",
+      "author": "Mark Spencer",
+      "email": "mspencer@gmail.com",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "comments": [
+        {
+          "author": "Latif Khalid",
+          "email": "khalidmontif@yahoo.com",
+          "text": "Awesome content!"
+        },
+        {
+          "author": "Benny",
+          "email": "benforyo@yahoo.co.uk",
+          "text": "I totally agree with this"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Get the Life You Want",
+      "author": "Gordon Keller",
+      "email": "gk@outlook.com",
+      "text": "Eleifend mi in nulla posuere. Venenatis urna cursus eget nunc. Iaculis nunc sed augue lacus viverra vitae congue. Quam nulla porttitor massa id. Neque volutpat ac tincidunt vitae semper quis. Vulputate ut pharetra sit amet. Ac tortor dignissim convallis aenean et tortor. Mattis rhoncus urna neque viverra. Morbi non arcu risus quis varius quam quisque id diam. Ac orci phasellus egestas tellus rutrum tellus pellentesque eu. Tristique risus nec feugiat in fermentum posuere urna nec. Malesuada bibendum arcu vitae elementum curabitur.",
+      "comments": [
+        {
+          "author": "Paul Chief",
+          "email": "pcboy@yahoo.com",
+          "text": "How can I reach you?"
+        },
+        {
+          "author": "Carl Anthony",
+          "email": "carltona@yahoo.com",
+          "text": "Great stuff"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Roses",
+      "author": "Sheila Boom",
+      "email": "boomshaka@gmail.com",
+      "text": "Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Amet massa vitae tortor condimentum. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet. Lectus arcu bibendum at varius vel pharetra vel turpis nunc. In est ante in nibh mauris cursus mattis. In tellus integer feugiat scelerisque varius morbi. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Facilisis mauris sit amet massa vitae tortor condimentum lacinia quis. Id aliquet lectus proin nibh nisl condimentum id venenatis a. Ut pharetra sit amet aliquam id diam. Volutpat sed cras ornare arcu dui. Risus sed vulputate odio ut. Habitasse platea dictumst quisque sagittis purus sit. Quis imperdiet massa tincidunt nunc. Nulla facilisi etiam dignissim diam quis enim lobortis. A condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Aliquam ut porttitor leo a. Mauris ultrices eros in cursus turpis massa. Interdum consectetur libero id faucibus nisl tincidunt eget nullam. Lacus luctus accumsan tortor posuere ac ut",
+      "comments": [
+        {
+          "author": "Prateeth Meek",
+          "email": "prateeth2011@gmail.com",
+          "text": "Great read. You killed it!"
+        },
+        {
+          "author": "Mosaic",
+          "email": "mosaiclaw@outlook.com",
+          "text": "Boo!"
+        }
+      ]
+    }
+    
+  ]
+}

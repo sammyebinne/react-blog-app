@@ -288,15 +288,30 @@ body {
 }
 
 .add-blog-page {
+  background: #283655;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 2rem 0;
   padding: 5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 1rem;
   width: 100%;
-  height: 500px;
-  background: #283655;
-  z-index: 3;
+}
+
+.add-blog-page input, .add-blog-page textarea {
+  margin: .5rem 0;
+  color: #1E1F26;
+  padding: .5rem;
+}
+
+.add-blog-page button {
+  width: 20%;
+  margin-top: 1rem;
+  border-radius: 10%;
 }
 
 .blog-container {
