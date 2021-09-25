@@ -1,29 +1,34 @@
 import { useState } from "react";
 // import useFetch from "../../assets/customHooks/useFetch";
 
-function CreateReply({blogData}) {
+function CreateReply({ blogData }) {
     const [author, setAuthor] = useState('');
     const [email, setEmail] = useState('');
     const [text, setText] = useState('');
 
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const reply = { author, email, text };
         const { id } = blogData;
         const query = id;
-        const url = `http://localhost:4000/blogs?${query}/`
+        const url = `http://localhost:4000/blogs/${query}/`;
 
-        fetch(url).then(res => console.log(res.json()))
+
         fetch(url, {
-            method: 'POST',
+            method: 'PATCH',
             mode: "cors",
-            headers: { "Content-Type": "application/json"},
-            body: JSON.stringify(reply)
-        }).then((res)=>{
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                "comments": [reply]
+            })
+        }).then((res) => {
             console.log(res)
         })
-        console.log(blogData);
+
     }
 
     return (
