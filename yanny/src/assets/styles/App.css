@@ -251,14 +251,15 @@ body {
   color: #1E1F26;
   width: 100vw;
   height: 10vh;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .nav-container .logo {
@@ -266,12 +267,14 @@ body {
   font-weight: 900;
   font-size: 2.5rem;
   color: white;
+  pointer-events: none;
 }
 
 .nav-container .add-blog-btn {
   background: #1E1F26;
   color: #fffefe;
-  padding: .8rem 1rem;
+  max-width: 20%;
+  padding: 1rem;
   border: none;
   border-radius: 15px;
   text-transform: uppercase;
@@ -281,7 +284,7 @@ body {
 
 .nav-container .search-bar {
   border: none;
-  width: 40%;
+  width: 30%;
   border-radius: 15%;
   padding: .5rem 1rem;
   outline: none;
@@ -292,14 +295,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem 0;
-  padding: 5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 2rem 0;
+  padding: 4rem 0;
   margin-top: 1rem;
-  width: 100%;
+}
+
+.add-blog-page .add-blog-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  width: 80%;
 }
 
 .add-blog-page input, .add-blog-page textarea {
@@ -308,10 +322,15 @@ body {
   padding: .5rem;
 }
 
+.add-blog-page textarea {
+  height: 10rem;
+}
+
 .add-blog-page button {
-  width: 20%;
+  min-width: 70px;
   margin-top: 1rem;
   border-radius: 10%;
+  width: 6rem;
 }
 
 .blog-container {
@@ -344,7 +363,7 @@ body {
   margin: 10% 5%;
   line-height: 2rem;
   font: 1.5rem;
-  width: 70%;
+  width: 100%;
   background: #4D648D;
   padding: 1.5rem;
   border-radius: 5%;
@@ -355,6 +374,7 @@ body {
   padding: .3rem;
   color: #283655;
   margin: 1rem;
+  width: 8rem;
 }
 
 .blog-container .delete-btn:hover {
@@ -371,7 +391,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 1rem;
-  width: 50%;
+  width: 80%;
 }
 
 .reply-form input, .reply-form textarea {
@@ -380,7 +400,7 @@ body {
 }
 
 .reply-form button {
-  width: 20%;
+  width: 5rem;
   margin-top: 1rem;
   border-radius: 10%;
 }

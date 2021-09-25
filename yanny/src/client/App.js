@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import Home from './components/Home';
 import CreateBlog from './components/CreateBlog';
 
@@ -7,12 +7,13 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route path="/" exact>
           <Home />
         </Route>
-        <Route path="/createblog" >
+        <Route path="/createblog" exact>
           <CreateBlog />
         </Route>
+        <Redirect to="/" />
       </Switch>
     </Router>
   );

@@ -24,7 +24,7 @@ function Navbar({ addPost, cancelAddPost, grabFilterArgs }) {
                 <input
                     className="search-bar"
                     type="text"
-                    placeholder="Search blog by author's name, email or keywords from the article..."
+                    placeholder="Search blogs by keywords..."
                     onChange={filterBlogs}
                 />
             }

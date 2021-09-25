@@ -5,7 +5,7 @@ function BlogList({ blogs }) {
     return (
         <section className="blogs-container">
             <div>
-                {blogs.map((blog) => {
+                {blogs && blogs.map((blog) => {
                     return <Blog key={blog.id} blog={blog} />
                 })}
             </div>
