@@ -2,28 +2,28 @@ import { useState } from "react";
 // import useFetch from "../../assets/customHooks/useFetch";
 
 function CreateReply({blogData}) {
-    const [name, setName] = useState('');
+    const [author, setAuthor] = useState('');
     const [email, setEmail] = useState('');
-    const [comment, setComment] = useState('');
+    const [text, setText] = useState('');
 
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        const reply = { name, email, comment };
+        const reply = { author, email, text };
         const { id } = blogData;
         const query = id;
-        const url = `http://localhost:4000/blogs/${query}`
+        const url = `http://localhost:4000/blogs?${query}/`
 
         fetch(url).then(res => console.log(res.json()))
-        // fetch(url, {
-        //     method: 'POST',
-        //     mode: "cors,"
-        //     headers: { "Content-Type": "application/json"},
-        //     body: JSON.stringify(reply)
-        // }).then((res)=>{
-        //     console.log(res)
-        // })
-        // console.log(blogData);
+        fetch(url, {
+            method: 'POST',
+            mode: "cors",
+            headers: { "Content-Type": "application/json"},
+            body: JSON.stringify(reply)
+        }).then((res)=>{
+            console.log(res)
+        })
+        console.log(blogData);
     }
 
     return (
@@ -35,8 +35,8 @@ function CreateReply({blogData}) {
                         name="name"
                         type="text"
                         placeholder="enter your name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        value={author}
+                        onChange={(e) => setAuthor(e.target.value)}
                     />
                     <label htmlFor="email"> Email:</label>
                     <input
@@ -51,8 +51,8 @@ function CreateReply({blogData}) {
                     <textarea
                         type="text"
                         required
-                        value={comment}
-                        onChange={(e) => setComment(e.target.value)}
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
                     ></textarea>
                     <button className="post-reply-btn" >Submit</button>
                 </form>

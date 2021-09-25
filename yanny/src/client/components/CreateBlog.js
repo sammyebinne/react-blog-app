@@ -6,11 +6,13 @@ function CreateBlog() {
     const [email, setEmail] = useState('');
     const [text, setText] = useState('');
 
+
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
         if (text.length < 150) {
-            // I could handle this better, I promise! lol
-            alert("your article is required to be min 150 characters");
+            return alert("your article is required to be min 150 characters");
         };
 
         const blogPost = { title, author, email, text };
@@ -24,9 +26,8 @@ function CreateBlog() {
         }).then((res) => {
             console.log(res)
         })
-
-
     }
+
 
 
     return (
