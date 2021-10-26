@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-
 function CreateReply({ blogData }) {
   const [author, setAuthor] = useState("");
   const [email, setEmail] = useState("");
@@ -12,6 +11,7 @@ function CreateReply({ blogData }) {
     const { id } = blogData;
     const query = id;
     const url = `http://localhost:4000/blogs/${query}/`;
+    const oldComments = blogData.comments;
 
     fetch(url, {
       method: "PATCH",
@@ -21,7 +21,7 @@ function CreateReply({ blogData }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        comments: [reply],
+        comments: [...oldComments, reply],
       }),
     }).then((res) => {
       console.log(res);
